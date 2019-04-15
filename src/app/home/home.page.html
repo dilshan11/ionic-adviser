@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Adviser
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+      <input type="email" class="form-control" id="exampleInputEmail1" #search aria-describedby="emailHelp" placeholder="word or letter">
+      <button type="button" class="btn btn-warning as" (click)=getpeople(search.value)>Search</button>
+      <div *ngIf=wait>
+        finding...
+      </div>
+      <div>
+          <ul class="list-group">
+              <li class="list-group-item" *ngFor="let a of descrip">{{a.advice}}</li>
+              </ul>
+      </div>
+  </div>
+</ion-content>
